@@ -17,7 +17,7 @@ public class Main {
         player.chooseLocation();
         player.findItem("armor");
         player.findItem("potion");
-        }
+
 
 //        System.out.println("Type a number...");
 //        String num = scanner.nextLine();
@@ -29,3 +29,5 @@ public class Main {
 //            System.out.println("That's a positive number!");
 //        }
     }
+
+}
