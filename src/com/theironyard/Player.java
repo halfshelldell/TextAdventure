@@ -28,7 +28,6 @@ public class Player extends Character{
         System.out.println("Choose your weapon [sword/mace]");
         weapon = Main.nextLine();
 
-
         if (weapon.equalsIgnoreCase("sword")) {
             System.out.println("Sword is a fine choice");
         } else if (weapon.equalsIgnoreCase("mace")) {

@@ -10,8 +10,6 @@ public class Main {
     public static void main(String[] args) throws Exception {
         System.out.println("Welcome traveller!");
 
-
-
         player.chooseName();
         player.chooseWeapon();
         player.chooseLocation();
@@ -23,7 +21,6 @@ public class Main {
 
         System.out.println(player);
         System.out.println(orge);
-
 
 //        System.out.println("Type a number...");
 //        String num = scanner.nextLine();
