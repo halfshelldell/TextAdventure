@@ -21,6 +21,9 @@ public class Main {
         Enemy orge = new Enemy("Orge", 10, 10);
         player.battle(orge);
 
+        System.out.println(player);
+        System.out.println(orge);
+
 
 //        System.out.println("Type a number...");
 //        String num = scanner.nextLine();

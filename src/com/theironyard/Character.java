@@ -28,4 +28,12 @@ public class Character {
 
     }
 
+    @Override
+    public String toString() {
+        return "Character{" +
+                "name='" + name + '\'' +
+                ", health=" + health +
+                ", damage=" + damage +
+                '}';
+    }
 }
