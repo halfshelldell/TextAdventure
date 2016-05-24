@@ -7,11 +7,15 @@ import static com.theironyard.Main.scanner;
 /**
  * Created by illladell on 5/18/16.
  */
-public class Player {
-    String name;
+public class Player extends Character{
     String weapon;
     String location;
     ArrayList<String> items = new ArrayList<>();
+
+    public Player() {
+        this.health = 20;
+        this.damage = 20;
+    }
 
     public void chooseName() {
         System.out.println("What is your name?");
@@ -55,7 +59,7 @@ public class Player {
         String answer = Main.nextLine();
         if (answer.equalsIgnoreCase("y")) {
             items.add(item);
-            System.out.printf("You have now %s items!\n", items.size());
+            System.out.printf("You now have %s items!\n", items.size());
 
         }
     }
