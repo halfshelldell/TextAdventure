@@ -63,4 +63,15 @@ public class Player extends Character{
         }
     }
 
+    public String getWeapon() {
+        return weapon;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public ArrayList<String> getItems() {
+        return items;
+    }
 }
