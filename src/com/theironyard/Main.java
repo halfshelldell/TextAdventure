@@ -19,7 +19,7 @@ public class Main {
     static Player player;
 
     public static void main(String[] args) throws Exception {
-        player = loadGame();
+        player = loadGame(SAVE_FILE_);
         if (player == null) {
             player = new Player();
             System.out.println("Starting New Game...");
@@ -49,8 +49,9 @@ public class Main {
         System.out.println(player);
         System.out.println(orge);
 
-        saveGame();
-        //Converts String to Int
+        saveGame(player, SAVE_FILE_);
+
+//        *Converts String to Int*
 //        System.out.println("Type a number...");
 //        String num = scanner.nextLine();
 //        int numInt = Integer.valueOf(num);
@@ -71,7 +72,7 @@ public class Main {
                 }
             }
             else if (line.equals("/save")){
-                saveGame();
+                saveGame(player, SAVE_FILE_);
             }
             else {
                 System.out.println("Command not found!");
@@ -82,11 +83,11 @@ public class Main {
         return line;
     }
 
-    public static void saveGame() {
+    public static void saveGame(Player player, String fileName) {
         JsonSerializer serializer = new JsonSerializer();
         String json = serializer.include("*").serialize(player);
 
-        File f = new File(SAVE_FILE_);
+        File f = new File(fileName);
         try {
             FileWriter fw = new FileWriter(f);
             fw.write(json);
@@ -98,8 +99,8 @@ public class Main {
 
     }
 
-    public static Player loadGame() {
-        File f = new File(SAVE_FILE_);
+    public static Player loadGame(String fileName) {
+        File f = new File(fileName);
         try {
             Scanner scanner = new Scanner(f);
             scanner.useDelimiter("\\Z");
